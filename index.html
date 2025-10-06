@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Study Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⏳ Smart Study Timer</h1>
+
+    <div id="timer" aria-live="polite">25:00</div>
+    <p id="status">Focus Time</p>
+
+    <div class="buttons">
+      <button id="start">Start</button>
+      <button id="pause" disabled>Pause</button>
+      <button id="reset">Reset</button>
+    </div>
+
+    <hr />
+
+    <div class="history-chart-container">
+      <!-- History -->
+      <div class="history-section">
+        <div class="history-header">
+          <h2>📖 Study History</h2>
+          <button id="deleteAll">Delete All</button>
+        </div>
+
+        <ul id="history" aria-label="Study history list"></ul>
+        <h3>✅ Total Study Today: <span id="total">0</span> mins</h3>
+      </div>
+
+      <!-- Chart -->
+      <div class="chart-section">
+        <canvas id="studyChart" aria-label="Study minutes chart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
